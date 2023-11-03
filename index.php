@@ -10,20 +10,25 @@
     <link rel="stylesheet" href=https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css>
   </head>
     <body>
-    <header class="p-1 bg-dark text-white">  
-      <div class="container">
-      <?php include "header.php";?>
+
+    <div class="vh-100 bg-dark">
+    <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="/Cinemapp/images/film.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
       </div>
-    </header>
-       <div class= "container-fluid text-center mx-0 vh-100 bg-dark">
-        <div class="row bg-dark py-5 text-white justify-content-center text-wrap  ">
-        <h1>Rick Astley might be the best placeholder</h1>
+      <div class="col-lg-6 text-white">
+        <h1 class="display-5 fw-bold lh-1 mb-3">Welcome to Cinemapp</h1>
+        <h2 class="h-2">Are you a member?</h2>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <a class="btn btn-warning btn-lg px-5 me-md-2" href="log_in.php">Log in</a>
+          <a class="btn btn-light btn-lg px-auto" href="sign_up.php">Sign-up</a>
         </div>
-        <div class="row bg-dark text-white text-wrap  w-auto h-75">  
-        <iframe class= "rounded-pill border border-warning border-5"width="auto" height="auto" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=1pq9NtUFbHlZbzZc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-        </div>
-    <!-- Optional JavaScript -->
+      </div>
+    </div>
+    </div>
+  </div>
+    <!--JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
