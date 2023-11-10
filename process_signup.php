@@ -47,7 +47,8 @@ if ( $_SERVER[ 'REQUEST_METHOD' ] == 'POST' )
    # On success register user inserting into 'usertable' database table.
   if ( empty( $errors ) ) 
   {
-    $q = "INSERT INTO usertable (first_name, last_name, email, pass, reg_date) VALUES ('$fn', '$ln', '$e', SHA2('$p',256), NOW() )";
+    #$q = "INSERT INTO usertable (first_name, last_name, email, pass, reg_date) VALUES ('$fn', '$ln', '$e', SHA2('$p',256), NOW() )"; #encryption bypassed as it doesnt work
+    $q = "INSERT INTO usertable (first_name, last_name, email, pass, reg_date) VALUES ('$fn', '$ln', '$e', '$p', NOW() )";
     $r = @mysqli_query ( $link, $q ) ;
     if ($r)
     { echo 'You are now registered.
