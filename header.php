@@ -23,7 +23,7 @@
 
 
         <div class="text-end"> 
-          <button type="button" class="btn btn-warning">Log out</button>
+          <a href="logout.php"  class="btn btn-warning">Log out</a>
         </div>
       </div>
 

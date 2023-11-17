@@ -10,7 +10,7 @@ function sesh_starter($data){
 }
 
 
-function sesh_destoyer(){
+function sesh_destroyer(){
     session_destroy();
 }
 ?>

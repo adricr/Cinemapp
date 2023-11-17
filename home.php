@@ -32,25 +32,31 @@
       while ( $row = mysqli_fetch_array( $r, MYSQLI_ASSOC ))
       {
       echo '
-        <div class= "container text-center">
-          <div class= "row row-cols-2 align-items-center" >
-            <div class= "col-6" >
-              <img src='. $row['img'] .' alt="Movie" class="img-thumbnail bg-secondary">
+        <div class= " container-fluid text-center bg-dark text-light border-top border-2 border-opacity-25 px-5 pt-2 pb-3">
+          <div class= "row row-cols-2 align-items-center justify-content-evenly" >
+            <div class= "col-12 col-sm-6 px-sm-1" >
+              <img src='. $row['img'] .' alt="Movie" class="img-thumbnail bg-secondary w-75">
             </div> 
-            <div class= "col-6"> 
-                <h2>'. $row['movie_title'].'</h2>
-                <br>
-                <h4>Brief</h4>
-                <p> '. $row['further_info'] .'</p>
-                <h5>Available hours</h5>
-                <div class= "col">  
-                  <a href="#'.$row['id'].'" class="btn btn-secondary btn-block" role="button"> '. $row['show1'] .' </a>
+            <div class="col-12 col-sm-4 align-self-stretch bg-black bg-opacity-50 rounded-5"> 
+                <div class=" pt-5">
+                  <h2>'. $row['movie_title'].'</h2>
+                  <br>
                 </div>
-                <div class= "col">  
-                  <a href="#'.$row['id'].'" class="btn btn-secondary btn-block" role="button"> '. $row['show2'] .' </a>
+                <div class=" my-5 py-4">
+                  <h4>Brief</h4>
+                  <p> '. $row['further_info'] .'</p>
                 </div>
-                <div class= "col">  
-                  <a href="#'.$row['id'].'" class="btn btn-secondary btn-block" role="button"> '. $row['show3'] .' </a>
+                <div class= "mt-5 py-5">
+                  <h5>Available hours</h5>
+                  <div class= "col my-1">  
+                    <a href="#'.$row['id'].'" class="btn btn-secondary btn-block border-1 border-white" role="button"> '. $row['show1'] .' </a>
+                  </div>
+                  <div class= "col my-1">  
+                    <a href="#'.$row['id'].'" class="btn btn-secondary btn-block border-1 border-white" role="button"> '. $row['show2'] .' </a>
+                  </div>
+                  <div class= "col my-1">  
+                    <a href="#'.$row['id'].'" class="btn btn-secondary btn-block border-1 border-white" role="button"> '. $row['show3'] .' </a>
+                  </div>
                 </div>
             </div> 
           </div> 
