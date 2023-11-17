@@ -11,7 +11,7 @@ if ( $_SERVER[ 'REQUEST_METHOD' ] == 'POST' )
 
   # Get connection, load, and validate functions.
   require ( 'login_tools.php' ) ;
-  require ('session.php') ;
+  require ('session_tools.php') ;
   # Check login.
  list ( $check, $data ) = validate ( $link, $_POST[ 'email' ], $_POST[ 'pass' ] ) ;
 
