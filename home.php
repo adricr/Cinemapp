@@ -1,9 +1,8 @@
-<?php session_start(); ?>
 <!doctype html>
 <html lang="en">
 
 <head>
-  <title>Title</title>
+  <title>Ecinema</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -23,6 +22,7 @@
     <?php
       # Open database connection.
       require ( 'db_connection.php' ) ;
+      
       # Retrieve movies from 'movie' database table.
       $q = "SELECT * FROM movietable" ;
       $r = mysqli_query( $link, $q ) ;
@@ -32,30 +32,43 @@
       while ( $row = mysqli_fetch_array( $r, MYSQLI_ASSOC ))
       {
       echo '
-        <div class= " container-fluid text-center bg-dark text-light border-top border-2 border-opacity-25 px-5 pt-2 pb-3">
-          <div class= "row row-cols-2 align-items-center justify-content-evenly" >
+      <div class= " container-fluid text-center bg-dark text-light border-top border-2 border-opacity-25 px-5 pt-2 pb-3">
+          <div class= "row row-cols-2 align-items-center justify-content-around" >
             <div class= "col-12 col-sm-6 px-sm-1" >
-              <img src='. $row['img'] .' alt="Movie" class="img-thumbnail bg-secondary w-75">
+              <img src='. $row['img'] .' alt="Movie" class="img-thumbnail bg-secondary w-50">
             </div> 
             <div class="col-12 col-sm-4 align-self-stretch bg-black bg-opacity-50 rounded-5"> 
-                <div class=" pt-5">
+                <div class=" pt-3 mb-3">
                   <h2>'. $row['movie_title'].'</h2>
                   <br>
                 </div>
-                <div class=" my-5 py-4">
+                <div class="  my-4 py-4">
                   <h4>Brief</h4>
                   <p> '. $row['further_info'] .'</p>
                 </div>
                 <div class= "mt-5 py-5">
                   <h5>Available hours</h5>
                   <div class= "col my-1">  
-                    <a href="#'.$row['id'].'" class="btn btn-secondary btn-block border-1 border-white" role="button"> '. $row['show1'] .' </a>
+                  <form action= "moviepage.php" method= "post"> 
+                  <input type="hidden" name="id" value="' .$row['id']. '"/>
+                  <input type="hidden" name="time" value="' .$row['show1']. '"/>
+                  <input type="submit" name="moviebutton" value="' .$row['show1']. '" class="btn btn-secondary btn-block border-1 border-white" role="button"/>
+                  </form>
+                  </div>
+
+                  <div class= "col my-1">  
+                  <form action= "moviepage.php" method= "post"> 
+                  <input type="hidden" name="id" value="' .$row['id']. '"/>
+                  <input type="hidden" name="time" value="' .$row['show2']. '"/>
+                  <input type="submit" name="moviebutton" value="' .$row['show2']. '" class="btn btn-secondary btn-block border-1 border-white" role="button"/>
+                  </form>
                   </div>
                   <div class= "col my-1">  
-                    <a href="#'.$row['id'].'" class="btn btn-secondary btn-block border-1 border-white" role="button"> '. $row['show2'] .' </a>
-                  </div>
-                  <div class= "col my-1">  
-                    <a href="#'.$row['id'].'" class="btn btn-secondary btn-block border-1 border-white" role="button"> '. $row['show3'] .' </a>
+                  <form action= "moviepage.php" method= "post"> 
+                  <input type="hidden" name="id" value="' .$row['id']. '"/>
+                  <input type="hidden" name="time" value="' .$row['show3']. '"/>
+                  <input type="submit" name="moviebutton" value="' .$row['show3']. '" class="btn btn-secondary btn-block border-1 border-white" role="button"/>
+                  </form>
                   </div>
                 </div>
             </div> 
@@ -65,6 +78,8 @@
       
       ';
       }
+      
+      
       # Close database connection.
       mysqli_close( $link) ; 
       }

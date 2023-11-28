@@ -1,16 +1,14 @@
 <?php
-
-function sesh_starter($data){
-    session_start();
-    $_SESSION[ 'user_id' ] = $data[ 'user_id' ] ;
-    $_SESSION[ 'first_name' ] = $data[ 'first_name' ] ;
-    $_SESSION[ 'last_name' ] = $data[ 'last_name' ] ;
-    echo "Session variables are set.";
-    load ( 'home.php' ) ;
+function session_exist()
+{
+if((isset($_SESSION[ 'user_id' ])))
+{
+    return true;
+}
+else
+{
+return false;
+}
 }
 
-
-function sesh_destroyer(){
-    session_destroy();
-}
 ?>

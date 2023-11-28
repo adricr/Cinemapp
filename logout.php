@@ -1,7 +1,6 @@
 <?php
 session_start();
-require ("session_tools.php");
-sesh_destroyer();
-require ("index.php");
+session_destroy();
+require("index.php");
 
 ?>

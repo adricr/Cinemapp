@@ -1,3 +1,9 @@
+<?php
+session_start();
+require('session_tools.php');
+if(session_exist()){
+  echo'logged in already';
+  require('home.php');}?>
 <!doctype html>
 <html lang="en">
 

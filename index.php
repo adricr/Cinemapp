@@ -1,7 +1,8 @@
+<?php require('session_tools.php');?>
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>Ecinema</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,12 +11,11 @@
     <link rel="stylesheet" href=https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css>
   </head>
     <body>
-
-    <div class="vh-100 bg-black bg-opacity-50">
+    <div class="vh-100 bg-black bg-opacity-75">
     <div class="container col-xxl-8 px-4 py-5">
     <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
       <div class="col-12 col-sm-8 col-lg-6">
-        <img src="/Cinemapp/images/film.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+        <img src="/Cinemapp/images/filmwhite.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
       </div>
       <div class="col-lg-6 text-white">
         <h1 class="display-5 fw-bold lh-1 mb-3">Welcome to Cinemapp</h1>
