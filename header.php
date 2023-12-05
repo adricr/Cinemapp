@@ -1,6 +1,8 @@
 <!doctype html>
+
 <html lang="en">
-  <body>
+<head><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous"></head>  
+<body>
 
       <div class="d-flex flex-wrap align-items-center justify-content-evenly justify-content-lg-between">
         <a href="index.php" class="d-flex text-light text-decoration-none">
@@ -14,8 +16,11 @@
 
 
         <div class="text-end"> 
-          <a href="logout.php"  class="btn btn-warning">Log out</a>
-        </div>
+        <ul class = "nav justify-content-center"> 
+          <li><a href="cart.php"><i class="mx-3 bx-3 fas fa-shopping-cart text-light nav-link fa-lg   "></i></a></li>  
+          <li><a href="logout.php"  class="btn btn-warning">Log out</a></li>
+        </ul>   
+      </div>
       </div>
   </body>
 </html>

@@ -1,5 +1,5 @@
 <?php
- if(!isset($_SESSION['movie_id'])){
+ if(!isset($_SESSION['movie']['id'])){
  session_start();}
  /*if(isset($_POST['moviebutton'])) { 
     echo 'id = ' .$_POST['id']. ' time =' .$_POST['time']. ' '; 
@@ -59,6 +59,7 @@
         <div class="justify-self-evenly">
         <form method="post" action="movie_page_tools.php">
         <input name="price" type="hidden" value="'. $row['mov_price'] .'">
+        <input name="movie_title" type="hidden" value="'. $row['movie_title'] .'">
         <input name="id" type="hidden" value="'. $id .'">
         <input name="time" type="hidden" value="'. $time .'">
         <select name="tickets" class="form-select text-center w-50 position-relative start-50 translate-middle-x">
