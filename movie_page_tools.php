@@ -5,5 +5,5 @@
     /*$_SESSION['movie_id'] = $_POST['id'];
     $_SESSION['movie_time'] = $_POST['time'];
     $_SESSION['tickets'] = $_POST['tickets'];*/
-    require('moviepage.php')
+    require('cart.php')
 ?>

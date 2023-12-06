@@ -51,10 +51,14 @@ if ( $_SERVER[ 'REQUEST_METHOD' ] == 'POST' )
     $q = "INSERT INTO usertable (first_name, last_name, email, pass, reg_date) VALUES ('$fn', '$ln', '$e', '$p', NOW() )";
     $r = @mysqli_query ( $link, $q ) ;
     if ($r)
-    { echo 'You are now registered.
-				<a class="alert-link" href="index.php">Login</a>
+    { echo '
+      <div class="alert alert-warning my-0 text-center alert-dismissible fade show" role="alert">
+      <h4 class = "my-0">You are now registered.</h4>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
 			'
-			; }
+			;
+      require("index.php");}
   
     # Close database connection.
     mysqli_close($link); 
@@ -64,13 +68,13 @@ if ( $_SERVER[ 'REQUEST_METHOD' ] == 'POST' )
   # Or report errors.
   else 
   {
-    echo 'The following error(s) occurred:' ;
+    echo '
+    The following error(s) occurred:' ;
     foreach ( $errors as $msg )
-    { echo " - $msg
-" ; }
-    echo 'or please try again.';
+    { echo " <- $msg" ; }
+    echo ' or please try again.';
     # Close database connection.
     mysqli_close( $link );
   }  
 }
-?>
+require("index.php");?>
