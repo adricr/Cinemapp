@@ -5,7 +5,7 @@
 <body>
 
       <div class="d-flex flex-wrap align-items-center justify-content-evenly justify-content-lg-between">
-        <a href="index.php" class="d-flex text-light text-decoration-none">
+        <a href="home.php" class="d-flex text-light text-decoration-none">
         <img src="/Cinemapp/images/filmwhite.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="50" height="50" loading="lazy">
         </a>
 
