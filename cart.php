@@ -16,8 +16,8 @@ require('db_connection.php');
 
 </head>
 
-<body class ="bg-dark">
-  <header class="p-1 bg-dark text-white">  
+<body class ="">
+  <header class="p-1 ">  
       <div class="container">
       <?php include "header.php";?>
       </div>
@@ -27,7 +27,7 @@ require('db_connection.php');
         <?php
         if(isset($_SESSION['movie'])){
         echo'
-        <div class="container-fluid bg-dark text-white text-center" >
+        <div class="container-fluid text-center" >
             <h1 class="display-1" >Shopping Cart</h1>
                 <div class="row">
                     <h2 class = "display-2">Movie: '.$_SESSION['movie']['movie_title'].'</h2>
@@ -60,7 +60,7 @@ require('db_connection.php');
         ';}
         else{
           echo'
-          <div class="container-fluid bg-dark text-white text-center" >
+          <div class="container-fluid text-center" >
               <h1 class="display-1" >Shopping Cart</h1>
                   <div class="row">
                       <h2 class = "display-2 mt-5 pt-5">Your cart is empty</h2>  

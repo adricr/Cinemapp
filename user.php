@@ -18,12 +18,12 @@ session_start();
 
 <body>
 <body>
-  <header class="p-1 bg-dark text-white">  
+  <header class="p-1">  
       <div class="container">
       <?php include "header.php";?>
       </div>
   </header>
-  <main class ="text-center bg-dark text-light container-fluid px-4 vh-100">
+  <main class ="text-center  container-fluid px-4">
 	<?php	
 		require ( 'db_connection.php' ) ;
 		require ( 'session_tools.php');
@@ -46,7 +46,7 @@ session_start();
 				<div class ="row">
 				<h1 class ="display-1">Account Information</h1>
 					<div class = "col my-5">
-						<div class = "card border-light text-bg-dark mb-3 ">
+						<div class = "card border-light  mb-3 ">
 							<div class ="card-header border-warning">
 							<h1 class="display-2"> Personal Information</h1>
 							</div>
@@ -55,18 +55,19 @@ session_start();
 							<h1>User ID : '  . $row['user_id'] . ' </h1>
 							<h1>Email :  ' . $row['email'] . '</h1>
 							<h1>Registration Date : ' . $day . '/' . $month . '/' . $year . ' </h1> 
+							<a href="delete_user.php"><h5 class="btn btn-warning">Delete User <i class="fa fa-user" aria-hidden="true"></i></h5></a>
 							</div>
 						</div>
 					</div>
 					<div class = "col my-5">
-						<div class = "card border-light text-bg-dark mb-3 ">
+						<div class = "card border-light  mb-3 ">
 							<div class ="card-header border-warning">
 							<h1 class="display-2"> Debit/Credit Card</h1>
 							</div>
 							<div class="card-body">
 							<h1>  Card Number : '  . $row['card_number'] . ' </h1> 
-							<h1> Expiration Date : '  . $row['exp_month'] . '/'. $row['exp_year'] .' </h1>
-							<a href="update_card.php" class="btn btn-warning m-3 px-5"><h2>Update</h2></a>
+							<h1> Expiration Date : '  . $row['card_exp'] . ' </h1>
+							<a href="update_card.php" class="btn btn-warning m-3 px-5"><h2>Update <i class="fa fa-credit-card" aria-hidden="true"></i></h2></a>
 							</div>
 						</div>
 					</div>

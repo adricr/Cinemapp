@@ -18,16 +18,16 @@ if(session_exist()){
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 </head>
 
-<body>
+<body class>
 <header>
-<div class="bg-dark pt-4">
-<a href="index.php" class="d-flex  justify-content-center text-light text-decoration-none fs-1">
+<div class="pt-4">
+<a href="index.php" class="d-flex  text-dark justify-content-center text-light text-decoration-none fs-1">
         <i class="fa fa-home" aria-hidden="true"></i>
         </a>
 </div>
 </header>    
 
-<div class="vh-100 bg-dark text-white justify-content-center d-flex col">
+<div class="vh-100 justify-content-center d-flex col">
         <form action="process_login.php" method="post" class="row align-items-center text-center row-gap-0 form-control-lg">
         <div class="row align-self-end">
         <h2>E-mail: </h2>

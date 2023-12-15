@@ -9,11 +9,11 @@
 
   <!-- Bootstrap CSS v5.3.2 -->
   <link rel="stylesheet" href=https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css>
-
-</head>
+  <link rel="stylesheet" href="styles.css">
+  </head>
 
 <body>
-  <header class="p-1 bg-dark text-white">  
+  <header class="p-1">  
       <div class="container">
       <?php include "header.php";?>
       </div>
@@ -32,7 +32,7 @@
       while ( $row = mysqli_fetch_array( $r, MYSQLI_ASSOC ))
       {
       echo '
-      <div class= " container-fluid text-center bg-dark text-light border-top border-2 border-opacity-25 px-5 pt-2 pb-3">
+      <div class= " container-fluid text-center border-bottom px-5 pt-2 pb-3">
           <div class= "row row-cols-2 align-items-center justify-content-around" >
             <div class= "col-12 col-sm-6 px-sm-1" >
               <img src='. $row['img'] .' alt="Movie" class="img-thumbnail bg-secondary w-50">

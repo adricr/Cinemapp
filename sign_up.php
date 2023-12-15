@@ -15,16 +15,18 @@ if(session_exist()){
 
   <!-- Bootstrap CSS v5.3.2 -->
   <link rel="stylesheet" href=https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css>
-
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 </head>
 
 <body>
-  <header class="p-1 bg-dark text-white">  
-      <div class="container">
-      <?php include "header.php";?>
-      </div>
-  </header>
-    <div class="vh-100 bg-dark text-white text-center justify-content-center d-flex">
+<header>
+<div class="pt-4 mb-5">
+<a href="index.php" class="d-flex  text-dark justify-content-center text-light text-decoration-none fs-1">
+        <i class="fa fa-home" aria-hidden="true"></i>
+        </a>
+</div>
+</header> 
+    <div class="vh-100  text-center justify-content-center d-flex">
         <form action="process_signup.php" method="post">
         First Name: <input type="text" class ="form-control" placeholder="John" name="first_name"><br>
         Last Name: <input type="text" class ="form-control" placeholder="Doe" name="last_name"><br>

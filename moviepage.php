@@ -10,7 +10,7 @@
 <html lang="en">
 
 <head>
-  <title>Title</title>
+  <title>Ecinema</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    <header class="p-1 bg-dark text-white">  
+    <header class="p-1">  
         <div class="container">
         <?php include "header.php";?>
         </div>
@@ -40,7 +40,7 @@
 
     echo '
     <main>
-    <div class=" container-fluid text-center bg-dark text-light border-top border-2 border-opacity-25 px-5 pt-2 pb-3">
+    <div class=" container-fluid text-center  px-5 pt-2 pb-3">
         <div class="row" >
             <div>
                 <h1 class="display-1">' .$row['movie_title']. '</h1>
@@ -77,7 +77,7 @@
     </main>
     
     ';
-    print_r($_SESSION);
+   // print_r($_SESSION);
     ?>
 
     <footer>

@@ -1,4 +1,3 @@
-<?php require('session_tools.php');?>
 <!doctype html>
 <html lang="en">
   <head>
